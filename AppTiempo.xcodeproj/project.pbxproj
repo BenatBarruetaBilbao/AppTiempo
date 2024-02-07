@@ -8,17 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		045CBD722B738A3600DA015F /* AppTiempoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045CBD712B738A3600DA015F /* AppTiempoApp.swift */; };
-		045CBD742B738A3600DA015F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045CBD732B738A3600DA015F /* ContentView.swift */; };
+		045CBD742B738A3600DA015F /* TiempoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045CBD732B738A3600DA015F /* TiempoView.swift */; };
 		045CBD762B738A3800DA015F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 045CBD752B738A3800DA015F /* Assets.xcassets */; };
 		045CBD792B738A3800DA015F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 045CBD782B738A3800DA015F /* Preview Assets.xcassets */; };
+		045CBD802B738BFB00DA015F /* TiempoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045CBD7F2B738BFB00DA015F /* TiempoViewModel.swift */; };
+		045CBD822B738C9600DA015F /* TiempoApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045CBD812B738C9600DA015F /* TiempoApiManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		045CBD6E2B738A3600DA015F /* AppTiempo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppTiempo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		045CBD712B738A3600DA015F /* AppTiempoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTiempoApp.swift; sourceTree = "<group>"; };
-		045CBD732B738A3600DA015F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		045CBD732B738A3600DA015F /* TiempoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiempoView.swift; sourceTree = "<group>"; };
 		045CBD752B738A3800DA015F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		045CBD782B738A3800DA015F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		045CBD7F2B738BFB00DA015F /* TiempoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiempoViewModel.swift; sourceTree = "<group>"; };
+		045CBD812B738C9600DA015F /* TiempoApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiempoApiManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +56,9 @@
 			isa = PBXGroup;
 			children = (
 				045CBD712B738A3600DA015F /* AppTiempoApp.swift */,
-				045CBD732B738A3600DA015F /* ContentView.swift */,
+				045CBD732B738A3600DA015F /* TiempoView.swift */,
+				045CBD7F2B738BFB00DA015F /* TiempoViewModel.swift */,
+				045CBD812B738C9600DA015F /* TiempoApiManager.swift */,
 				045CBD752B738A3800DA015F /* Assets.xcassets */,
 				045CBD772B738A3800DA015F /* Preview Content */,
 			);
@@ -137,7 +143,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				045CBD742B738A3600DA015F /* ContentView.swift in Sources */,
+				045CBD742B738A3600DA015F /* TiempoView.swift in Sources */,
+				045CBD822B738C9600DA015F /* TiempoApiManager.swift in Sources */,
+				045CBD802B738BFB00DA015F /* TiempoViewModel.swift in Sources */,
 				045CBD722B738A3600DA015F /* AppTiempoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

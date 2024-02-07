@@ -7,18 +7,37 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct TiempoView: View {
+    
+    @State var latitud: String = ""
+    @State var longitud: String = ""
+    private var tiempoApiManager: TiempoApiManager = TiempoApiManager()
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationView {
+            VStack {
+                Text("Latitud: ")
+                TextEditor(text: $latitud)
+                    .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/)
+                    .frame(height: 35)
+                Text("Longitud: ")
+                TextEditor(text: $longitud)
+                    .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/)
+                    .frame(height: 35)
+                //NavigationLink(){
+                    Button("Buscar tiempo") {
+                        tiempoApiManager.executeAPI(latitud: latitud, longitud: longitud)
+                    }
+                    
+                    .padding()
+                //}
+                Spacer()
+            }
+            .padding()
         }
-        .padding()
     }
 }
 
 #Preview {
-    ContentView()
+    TiempoView()
 }
