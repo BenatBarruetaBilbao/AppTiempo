@@ -11,8 +11,8 @@ struct TiempoView: View {
     
     @State var latitud: String = ""
     @State var longitud: String = ""
-    private var tiempoApiManager: TiempoApiManager = TiempoApiManager()
-    
+    @State var tiempoViewModel: TiempoViewModel = TiempoViewModel()
+ 
     var body: some View {
         NavigationView {
             VStack {
@@ -26,12 +26,19 @@ struct TiempoView: View {
                     .frame(height: 35)
                 //NavigationLink(){
                     Button("Buscar tiempo") {
-                        tiempoApiManager.executeAPI(latitud: latitud, longitud: longitud)
+                        tiempoViewModel.executeAPI(latitud: latitud, longitud: longitud)
                     }
-                    
                     .padding()
+                
                 //}
                 Spacer()
+                /*List {
+                    ForEach(tiempoViewModel.dataModel, id: \.hourly) { dataModel in
+                        HStack{
+                            Text(String(dataModel.hourly.time.first!))
+                        }
+                    }
+                }*/
             }
             .padding()
         }

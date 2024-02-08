@@ -13,6 +13,7 @@
 		045CBD792B738A3800DA015F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 045CBD782B738A3800DA015F /* Preview Assets.xcassets */; };
 		045CBD802B738BFB00DA015F /* TiempoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045CBD7F2B738BFB00DA015F /* TiempoViewModel.swift */; };
 		045CBD822B738C9600DA015F /* TiempoApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045CBD812B738C9600DA015F /* TiempoApiManager.swift */; };
+		04FBA0A82B74DC580082BA8B /* TiempoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FBA0A72B74DC580082BA8B /* TiempoModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		045CBD782B738A3800DA015F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		045CBD7F2B738BFB00DA015F /* TiempoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiempoViewModel.swift; sourceTree = "<group>"; };
 		045CBD812B738C9600DA015F /* TiempoApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiempoApiManager.swift; sourceTree = "<group>"; };
+		04FBA0A72B74DC580082BA8B /* TiempoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiempoModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				045CBD732B738A3600DA015F /* TiempoView.swift */,
 				045CBD7F2B738BFB00DA015F /* TiempoViewModel.swift */,
 				045CBD812B738C9600DA015F /* TiempoApiManager.swift */,
+				04FBA0A72B74DC580082BA8B /* TiempoModel.swift */,
 				045CBD752B738A3800DA015F /* Assets.xcassets */,
 				045CBD772B738A3800DA015F /* Preview Content */,
 			);
@@ -144,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				045CBD742B738A3600DA015F /* TiempoView.swift in Sources */,
+				04FBA0A82B74DC580082BA8B /* TiempoModel.swift in Sources */,
 				045CBD822B738C9600DA015F /* TiempoApiManager.swift in Sources */,
 				045CBD802B738BFB00DA015F /* TiempoViewModel.swift in Sources */,
 				045CBD722B738A3600DA015F /* AppTiempoApp.swift in Sources */,
