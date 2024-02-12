@@ -11,34 +11,36 @@ struct TiempoView: View {
     
     @State var latitud: String = ""
     @State var longitud: String = ""
-    @State var tiempoViewModel: TiempoViewModel = TiempoViewModel()
+    @StateObject var tiempoViewModel: TiempoViewModel = TiempoViewModel()
  
     var body: some View {
         NavigationView {
             VStack {
                 Text("Latitud: ")
                 TextEditor(text: $latitud)
-                    .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/)
+                    .border(Color.black)
                     .frame(height: 35)
                 Text("Longitud: ")
                 TextEditor(text: $longitud)
-                    .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/)
+                    .border(Color.black)
                     .frame(height: 35)
-                //NavigationLink(){
-                    Button("Buscar tiempo") {
-                        tiempoViewModel.executeAPI(latitud: latitud, longitud: longitud)
-                    }
+                Button("Buscar tiempo") {
+                    tiempoViewModel.executeAPI(latitud: latitud, longitud: longitud)
+                }
                     .padding()
+                if let data = tiempoViewModel.dataModel {
+                    Text("Temperatura en coordenadas: \(latitud), \(longitud)\n")
+                    Text("\(data.hourly.temperature_2m.map{ "\($0)" }.joined(separator: ","))")
+                } else if let error = tiempoViewModel.error{
+                    Text("Ha habido algún error en el proceso: \(error.localizedDescription)")
+                } else {
+                    Text("No se ha realizado ninguna petición")
+                }
                 
-                //}
+                    
+                            
                 Spacer()
-                /*List {
-                    ForEach(tiempoViewModel.dataModel, id: \.hourly) { dataModel in
-                        HStack{
-                            Text(String(dataModel.hourly.time.first!))
-                        }
-                    }
-                }*/
+                
             }
             .padding()
         }
